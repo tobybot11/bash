@@ -22,6 +22,8 @@ PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
 # what to add to .bashrc.. for now
 
 ```bash
-# load bash aliases
-source "$XDG_CONFIG_HOME/bash/aliases"
+# load bash rc from XDG location
+export XDG_CONFIG_HOME="${XDG_CONFIG_HOME:-$HOME/.config}"
+[ -s "$XDG_CONFIG_HOME/bash/rc" ] && source "$XDG_CONFIG_HOME/bash/rc"
+
 ```

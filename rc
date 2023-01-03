@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# bashrc
+
+# first inspired by https://github.com/rafi/.config
+# ack to rvm for ps1_set
+# ---
+
+# load bash aliases
+source "$XDG_CONFIG_HOME/bash/aliases"
+
+# load bash aliases
+source "$XDG_CONFIG_HOME/bash/utils"
+
+echo "--- .config/bash/rc end --- "

@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# .config/bash/utils
+
+# Source all extra functions
+for func in "$XDG_CONFIG_HOME/bash/functions.d/"*.bash; do
+	. "$func"
+done
+unset func
+
+
+ps1_set --prompt $(printf "\u23E3")
+
+echo "--- .config/bash/utils end --- "
+
+# vim: set ft=bash ts=2 sw=2 tw=80 noet :

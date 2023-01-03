@@ -1,9 +1,39 @@
-# alias l='ls -latrv --ignore=.?*'
+#!/usr/bin/env bash
+# bash/aliases
 
-alias vi='nvim'
+# Carry over aliases to the root account when using sudo
+# trick for some reason i forgot
+alias sudo='sudo '
+
+# git aliases
+alias gs='git status'
+alias gcom='git commit -m'
+alias gcam='git commit -am'
+alias gl='git log --all --decorate --graph'
+
+# neovim aliaes - need to check if nvim or vim is installed and 
+if hash nvim 2>/dev/null; then
+  alias vim='nvim'
+else
+  alias vim='vim'
+fi
+alias vi=vim
+
+# need to swttch these to exa eventually
 alias ls='ls --color=auto'
 alias ll='ls -lav --ignore=..'   # show long listing of all except ".."
+
+# some rust coolness - need exa installed and bat
+if hash exa 2>/dev/null; then
+  alias l='exa -la --git -F --no-user -s modified'
+else
 # alias l='ls -lav --ignore=.?*'   # show long listing but no hidden dotfiles except "."
-alias l='ls -altr --color=auto'
-alias sudo='sudo '
-alias g='git status'
+  alias l='ls -altr --color=auto'
+fi
+
+if hash bat 2>/dev/null; then
+  alias cat='bat'
+fi
+
+echo "--- .config/bash/aliases end --- "
+# vim: set ft=bash ts=2 sw=2 tw=80 noet :
