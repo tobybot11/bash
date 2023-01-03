@@ -19,11 +19,12 @@ export HISTFILE=~/.bash_eternal_history
 PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
 ```
 
-# what to add to .bashrc.. for now
+# what to add to .bashrc.. at the bottom for now
 
 ```bash
 # load bash rc from XDG location
 export XDG_CONFIG_HOME="${XDG_CONFIG_HOME:-$HOME/.config}"
 [ -s "$XDG_CONFIG_HOME/bash/rc" ] && source "$XDG_CONFIG_HOME/bash/rc"
 
+echo "--- .bashrc end --- "
 ```
