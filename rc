@@ -11,4 +11,7 @@ source "$XDG_CONFIG_HOME/bash/aliases"
 # load bash aliases
 source "$XDG_CONFIG_HOME/bash/utils"
 
+# load bash exports
+source "$XDG_CONFIG_HOME/bash/exports"
+
 echo "--- .config/bash/rc end --- "
