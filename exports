@@ -1,4 +1,5 @@
-
+#!/usr/bin/env bash
+# bash/exports
 
 if hash nvim 2>/dev/null; then
   export EDITOR=nvim
@@ -6,4 +7,9 @@ else
   export EDITOR=vim
 fi
 
+# export TASKDATA="$XDG_DATA_HOME/task"
+export TASKDDATA="$XDG_DATA_HOME/taskd"
+
 echo "--- .config/bash/exports end --- "
+
+# vim: set ft=bash ts=2 sw=2 tw=80 noet :
