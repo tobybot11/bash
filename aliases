@@ -37,5 +37,10 @@ fi
 
 alias va="$(which vim) ~/ap.txt.gpg"
 
+if hash xclip 2>/dev/null; then
+	alias pbcopy='xclip -selection clipboard'
+	alias pbpaste='xclip -selection clipboard -o'
+fi
+
 echo "--- .config/bash/aliases end --- "
 # vim: set ft=bash ts=2 sw=2 tw=80 noet :
