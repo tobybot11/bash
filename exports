@@ -10,6 +10,10 @@ fi
 # export TASKDATA="$XDG_DATA_HOME/task"
 export TASKDDATA="$XDG_DATA_HOME/taskd"
 
+export LESS='-R'
+
+export KEYBASE_PRIVATE="$(keybase status >/dev/null 2>&1 && keybase status | grep mount | awk -F: '{ print $2 }' | sed 's/ //g')/private/tobybot11"
+
 echo "--- .config/bash/exports end --- "
 
 # vim: set ft=bash ts=2 sw=2 tw=80 noet :
